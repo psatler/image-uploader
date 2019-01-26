@@ -5,6 +5,10 @@ const multer = require('multer')
 const multerConfig = require('./config/multer')
 const multerMiddleware = multer(multerConfig).single('file') //file is the name given to the stored uploaded file
 
+routes.get('/', (req, res) => {
+    return res.send('hdauhdushd')
+})
+
 routes.post('/posts', multerMiddleware, (req, res) => {
     console.log(req.file) // .file from express
 
