@@ -1,6 +1,21 @@
 const express = require('express')
 const morgan = require('morgan')
 const app = express() // instantiating the express app
+const mongoose = require('mongoose')
+
+/**
+ * Database setup
+ */
+const database = "upload";
+const URL = `mongodb://localhost:27017/${database}`;
+mongoose.connect(
+    URL,
+    {
+        useNewUrlParser: true
+    }
+);
+
+
 
 // setting up configs
 app.use(express.json()) // express handling messages in json format

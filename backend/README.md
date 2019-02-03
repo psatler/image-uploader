@@ -16,4 +16,5 @@ yarn dev
 
 - _morgan_: for logging http requests
 - _multer_: to handle requests of the type *Multiform part* middleware
+- _mongoose_: middleware for mongoDB. It was used an MongoDB Compass to develop locally on Windows 10.
 
