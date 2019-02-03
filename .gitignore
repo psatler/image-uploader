@@ -1,2 +1,5 @@
 backend/node_modules
+backend/tmp/uploads 
+
+
 frontend/node_modules
