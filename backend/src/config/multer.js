@@ -7,10 +7,11 @@ const crypto = require('crypto') // node js built in libs
  * dest: folder to where the files will be stored in the system (__dirname refers to /config)
  * storage:
  * limits: we can define file size limit to upload, number of files max to be uploaded, etc
+ * fileFilter: 
  * 
  */
 module.exports = {
-    dest: path.resolve(__dirname, '..', '..', 'tmp', 'uploads'),
+    dest: path.resolve(__dirname, '..', '..', 'tmp', 'uploads'), // so the path will go backwards two times and then go to tmp/uploads. it is used a fallback of the destionation defined below inside diskStorage
     storage: multer.diskStorage({
         destination: (req, file, cb) => {
             cb(null, path.resolve(__dirname, '..', '..', 'tmp', 'uploads'))

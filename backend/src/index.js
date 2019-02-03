@@ -1,6 +1,6 @@
 const express = require('express')
 const morgan = require('morgan')
-const app = express()
+const app = express() // instantiating the express app
 
 // setting up configs
 app.use(express.json()) // express handling messages in json format
