@@ -10,9 +10,9 @@ const crypto = require('crypto') // node js built in libs
  * fileFilter: 
  * 
  */
-module.exports = {
-    dest: path.resolve(__dirname, '..', '..', 'tmp', 'uploads'), // so the path will go backwards two times and then go to tmp/uploads. it is used a fallback of the destionation defined below inside diskStorage
-    storage: multer.diskStorage({
+
+const storageTypes = {
+    local: multer.diskStorage({
         destination: (req, file, cb) => {
             cb(null, path.resolve(__dirname, '..', '..', 'tmp', 'uploads'))
         },
@@ -20,11 +20,21 @@ module.exports = {
             crypto.randomBytes(16, (err, hash) => { // callback with error and hash (if created successfully)
                 if (err) cb(err) // if error, pass to callback to be handled by the controller
 
-                const fileName = `${hash.toString('hex')}-${file.originalname}`; // hash + name of the file in the user's computer
-                cb(null, fileName) // error is null and also passing the fileName
+                file.key = `${hash.toString('hex')}-${file.originalname}`; // hash + name of the file in the user's computer
+                cb(null, file.key) // error is null and also passing the fileName (file.key)
             })
         }
     }),
+    // if you want to use s3
+    // s3: multerS3({
+    //     s3: new aws.S3(),
+    // })
+}
+
+
+module.exports = {
+    dest: path.resolve(__dirname, '..', '..', 'tmp', 'uploads'), // so the path will go backwards two times and then go to tmp/uploads. it is used a fallback of the destionation defined below inside diskStorage
+    storage: storageTypes["local"],
     limits: {
         fileSize: 2 * 1024 * 1024, // size is defined in bytes (2Mb was defined)
     },
