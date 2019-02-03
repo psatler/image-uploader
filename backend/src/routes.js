@@ -18,6 +18,17 @@ routes.get('/', (req, res) => {
     return res.json({'hdauhdushd': "hello, world!"})
 })
 
+
+/**
+ * GET posts
+ */
+routes.get('/posts', async (req, res) => {
+    const posts = await Post.find();
+
+    return res.json(posts);
+})
+
+
 // defining the router with the middleware above
 routes.post('/posts', multerMiddleware, async (req, res) => {
     console.log(req.file) // .file from express
