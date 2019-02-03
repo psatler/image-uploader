@@ -34,7 +34,7 @@ const storageTypes = {
 
 module.exports = {
     dest: path.resolve(__dirname, '..', '..', 'tmp', 'uploads'), // so the path will go backwards two times and then go to tmp/uploads. it is used a fallback of the destionation defined below inside diskStorage
-    storage: storageTypes["local"],
+    storage: storageTypes[process.env.STORAGE_TYPE],
     limits: {
         fileSize: 2 * 1024 * 1024, // size is defined in bytes (2Mb was defined)
     },

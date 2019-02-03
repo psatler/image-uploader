@@ -28,7 +28,9 @@ routes.get('/posts', async (req, res) => {
     return res.json(posts);
 })
 
-
+/**
+ * POST posts
+ */
 // defining the router with the middleware above
 routes.post('/posts', multerMiddleware, async (req, res) => {
     console.log(req.file) // .file from express
@@ -47,6 +49,17 @@ routes.post('/posts', multerMiddleware, async (req, res) => {
     // return res.json({
     //     hello: "World"
     // })
+});
+
+/**
+ * DELETE posts
+ */
+routes.delete('/posts/:id', async (req, res) => {
+    const post = await Post.findById(req.params.id);
+
+    await post.remove();
+
+    return res.send();
 })
 
 

@@ -11,6 +11,7 @@ or
 yarn dev
 ```
 
+- There is a _.env.test_ file for guidance
 
 # dependencies used
 
