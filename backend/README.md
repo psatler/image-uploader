@@ -3,7 +3,9 @@
 This is the backend of an image uploader app which makes use of Express, MongoDB, Multer for dealing with files. More dependencies can be found below.
 
 # How to run
-It was created a script to run either in dev mode or production mode (when deployed). In dev mode, it uses _nodemon_ to restart automatically whenever there is a javascript file modification.
+You need to create a `.env` file as shown in the `.env.test` in the root directory of the backend folder.
+
+It was also created a script to run either in dev mode or production mode (when deployed). In dev mode, it uses _nodemon_ to restart automatically whenever there is a javascript file modification.
 
 ```js
 npm run dev // for development mode
