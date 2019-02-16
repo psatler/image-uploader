@@ -7,6 +7,7 @@ const app = express() // instantiating the express app
 const mongoose = require('mongoose')
 const path = require('path')
 
+const PORT = 3001;
 /**
  * Database setup
  */
@@ -36,4 +37,4 @@ app.use(require("./routes"))
 //     res.send('Hello World!')
 // })
 
-app.listen(3000)
+app.listen(PORT, () => console.log(`App listening on port ${PORT}!`))
