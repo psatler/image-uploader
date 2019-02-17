@@ -6,6 +6,7 @@ const morgan = require('morgan')
 const app = express() // instantiating the express app
 const mongoose = require('mongoose')
 const path = require('path')
+const cors = require('cors')
 
 const PORT = 3001;
 /**
@@ -22,6 +23,7 @@ mongoose.connect(
 
 
 // setting up configs
+app.use(cors()) // to allow cors access 
 app.use(express.json()) // express handling messages in json format
 app.use(express.urlencoded({
     extended: true

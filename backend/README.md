@@ -28,6 +28,7 @@ yarn dev
 - _mongoose_: middleware for mongoDB. It was used. an MongoDB Compass to develop locally on Windows 10.
 - _nodemon_ for local development restarts.
 - _dotenv_ for environment variables. There is a _.env.test_ file for guidance.
+- [_cors_](https://www.npmjs.com/package/cors): to enable CORS 
 
 # Some software used as helpers
 - [MongoDB](https://www.mongodb.com/products/compass) Compass for setting up MongoDB locally
