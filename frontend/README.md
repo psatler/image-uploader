@@ -7,7 +7,7 @@
 - [react-dropzone](https://github.com/react-dropzone/react-dropzone): HTML5 for drag and drop files.  
 - [react-circular-progressbar](https://github.com/iqnivek/react-circular-progressbar): a circular progressbar component, built with SVG and extensively customizable.
 - [react-icons](https://www.npmjs.com/package/react-icons): SVG React icons of popular icon packs using ES6 imports.
-
+- [lodash](https://www.npmjs.com/package/lodash): The Lodash library exported as Node.js modules.
 #
 
 
