@@ -8,6 +8,7 @@
 - [react-circular-progressbar](https://github.com/iqnivek/react-circular-progressbar): a circular progressbar component, built with SVG and extensively customizable.
 - [react-icons](https://www.npmjs.com/package/react-icons): SVG React icons of popular icon packs using ES6 imports.
 - [lodash](https://www.npmjs.com/package/lodash): The Lodash library exported as Node.js modules.
+- [filesize](https://www.npmjs.com/package/filesize): filesize.js provides a simple way to get a human readable file size string from a number (float or integer) or string.
 #
 
 
