@@ -4,8 +4,9 @@
 # Dependencies
 
 - [styled-components](https://github.com/styled-components/styled-components): as the name says, you style the component itself inside the js file. TIP: if using vscode, install the `vscode-styled-components` extension.
-- [react-dropzone](https://github.com/react-dropzone/react-dropzone): HTML5 for drag and drop files  
+- [react-dropzone](https://github.com/react-dropzone/react-dropzone): HTML5 for drag and drop files.  
 - [react-circular-progressbar](https://github.com/iqnivek/react-circular-progressbar): a circular progressbar component, built with SVG and extensively customizable.
+- [react-icons](https://www.npmjs.com/package/react-icons): SVG React icons of popular icon packs using ES6 imports.
 
 #
 
