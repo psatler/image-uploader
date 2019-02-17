@@ -1,6 +1,4 @@
-
-
-IN PROGRESS!!!!!!!!!
+> Reactjs frontend of the drag and drop app
 
 
 # Dependencies
