@@ -36,7 +36,7 @@ const FileList = ({ files }) => (
                     {/* if it has a link, it can be showed */}
                     {uploadedFile.url && (
                         <a 
-                            href="http://localhost:3001/files/0c197d2016f07766b7da2aeefaf82532-FullSizeRender.jpg"
+                            href={uploadedFile.url}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
