@@ -5,8 +5,9 @@ IN PROGRESS!!!!!!!!!
 
 # Dependencies
 
-- Styled-Components: as the name says, you style the component itself inside the js file. TIP: if using vscode, install the `vscode-styled-components` extension.
-
+- [styled-components](https://github.com/styled-components/styled-components): as the name says, you style the component itself inside the js file. TIP: if using vscode, install the `vscode-styled-components` extension.
+- [react-dropzone](https://github.com/react-dropzone/react-dropzone): HTML5 for drag and drop files  
+- 
 
 #
 
