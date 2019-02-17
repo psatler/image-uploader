@@ -3,6 +3,11 @@
 IN PROGRESS!!!!!!!!!
 
 
+# Dependencies
+
+- Styled-Components: as the name says, you style the component itself inside the js file. TIP: if using vscode, install the `vscode-styled-components` extension.
+
+
 #
 
 
