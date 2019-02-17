@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { uniqueId } from 'lodash';
 import filesize from 'filesize';
+import api from './services/api'
 
 import GlobalStyle from './styles/global';
 import { Container, Content } from './styles';
@@ -29,6 +30,35 @@ class App extends Component {
 
     this.setState({
       uploadedFiles: this.state.uploadedFiles.concat(uploadedFiles),
+    });
+
+    // handling the upload part
+    uploadedFiles.forEach(this.processUpload);
+  };
+
+  updateFile = (id, data) => {
+    // uploading progress number
+    this.setState({
+      uploadedFiles: this.state.uploadedFiles.map( uploadedFile => {
+        return id === uploadedFile.id ? { ...uploadedFile, ...data } : uploadedFile;
+      })
+    })
+  };
+
+  processUpload = (uploadedFile) => {
+    const data = new FormData();
+    data.append('file', uploadedFile.file, uploadedFile.name);
+
+    // NOTE: below we're not using async await
+    api.post('/posts', data, {
+      // function of axios to check the progress
+      onUploadProgress: e => {
+        const progress = parseInt(Math.round((e.loaded * 100) / e.total));
+
+        this.updateFile(uploadedFile.id, {
+          progress,
+        });
+      }
     });
   };
 

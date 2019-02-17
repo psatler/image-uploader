@@ -7,7 +7,7 @@ import { Container, FileInfo, Preview } from './styles';
 const FileList = ({ files }) => (
     <Container>
         { files && files.map(uploadedFile => (
-            <li>
+            <li key={uploadedFile.id}>
                 <FileInfo>
                     <Preview src={uploadedFile.preview}/>
                     <div>
