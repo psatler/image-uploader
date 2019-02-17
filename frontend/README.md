@@ -9,6 +9,10 @@
 - [react-icons](https://www.npmjs.com/package/react-icons): SVG React icons of popular icon packs using ES6 imports.
 - [lodash](https://www.npmjs.com/package/lodash): The Lodash library exported as Node.js modules.
 - [filesize](https://www.npmjs.com/package/filesize): filesize.js provides a simple way to get a human readable file size string from a number (float or integer) or string.
+- [axios](https://github.com/axios/axios): Promise based HTTP client for the browser and node.js
+
+
+
 #
 
 
