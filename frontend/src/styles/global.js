@@ -1,6 +1,9 @@
 // creating the global styles of application
 import { createGlobalStyle } from 'styled-components'
 
+// circular progress bar comes with a default css, so doing the import here to make it only one time
+import 'react-circular-progressbar/dist/styles.css';
+
 // using template literals
 export default createGlobalStyle`
     /* for all components */
